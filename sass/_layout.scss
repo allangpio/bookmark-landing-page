@@ -1,0 +1,177 @@
+///////////
+// HEADER
+///////////
+
+.header {
+  padding: 2rem 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  & img {
+    height: 1.5rem;
+  }
+}
+
+.nav {
+  &__link {
+    text-decoration: none;
+    color: var(--color-blue-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.9rem;
+
+    padding: 0.75rem 2.5rem;
+
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: var(--color-primary-red);
+    }
+
+    &--login {
+      color: #fff;
+      background-color: var(--color-primary-red);
+      border: 1px solid var(--color-primary-red);
+      border-radius: 10px;
+
+      &:hover {
+        color: var(--color-primary-red);
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+///////////
+// HOME-HERO
+///////////
+
+.home-hero {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  place-content: center;
+  place-items: center center;
+  gap: 3rem;
+
+  margin: 0rem 8rem;
+
+  min-height: 80vh;
+
+  &__imagem {
+    & img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: flex-start;
+
+    & > :last-child {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0rem;
+  place-items: center start;
+}
+
+///////////
+// FEATURES
+///////////
+
+.features {
+  padding: 0rem 8rem;
+  margin: 0 auto;
+  & > h2,
+  & > p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    & input[type='radio']:checked + label {
+      border-bottom: 4px solid var(--color-primary-red);
+    }
+
+    &__item {
+      padding: 0 5rem 2rem 5rem;
+      border-bottom: 2px solid #eee;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--color-primary-red);
+      }
+
+      &:active {
+        border-bottom: 4px solid var(--color-primary-red);
+      }
+    }
+  }
+}
+.components {
+  margin-top: 4rem;
+  min-height: 60vh;
+}
+
+.component {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  //   gap: 1rem;
+  place-items: center center;
+
+  &__image {
+    & img {
+      object-fit: contain;
+      height: 80%;
+      width: 80%;
+    }
+  }
+}
+
+.nodisplay {
+  display: none;
+}
+
+///////////
+// DOWNLOADS
+///////////
+.download {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+
+  & > p {
+    max-width: 600px;
+    margin: 1.5rem auto 3rem auto;
+  }
+}
+
+///////////
+// CARDS
+///////////
+
+.cards {
+  width: 80%;
+  margin: 2rem auto;
+  position: relative;
+
+  min-height: 60vh;
+}
