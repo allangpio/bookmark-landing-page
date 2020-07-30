@@ -13,7 +13,12 @@
     />
 
     <title>Frontend Mentor | Bookmark landing page</title>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -200,41 +205,57 @@
         answered please feel free to email us.
       </p>
 
-      <div class="quetions-wrapper">
-        <!-- Question 1 -->
-        What is Bookmark?
+      <div class="questions">
+        <div for="whatisbookmark" class="questions__label">
+          <p class="questions__question">
+            What is Bookmark?
+            <i class="questions__arrow fas fa-chevron-down"></i>
+          </p>
+        </div>
+        <p class="questions__answer">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+          tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis
+          quam ornare mattis.
+        </p>
 
-        <!-- Answer 1 -->
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
-        justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare
-        mattis.
+        <div for="request-browser" class="questions__label">
+          <p class="questions__question">
+            How can I request a new browser?
+            <i class="questions__arrow fas fa-chevron-down"></i>
+          </p>
+        </div>
+        <p class="questions__answer">
+          Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+          ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
+          aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+          Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+          Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+        </p>
 
-        <!-- Question 2 -->
-        How can I request a new browser?
+        <div for="mobile-app" class="questions__label">
+          <p class="questions__question">
+            Is there a mobile app?
+            <i class="questions__arrow fas fa-chevron-down"></i>
+          </p>
+        </div>
+        <p class="questions__answer">
+          Sed consectetur quam id neque fermentum accumsan. Praesent luctus
+          vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula
+          quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex
+          et ultricies bibendum.
+        </p>
 
-        <!-- Answer 2 -->
-        Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
-        ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet
-        convallis ultricies. Mauris augue massa, ultricies non ligula.
-        Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
-        Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-
-        <!-- Question 3 -->
-        Is there a mobile app?
-
-        <!-- Answer 3 -->
-        Sed consectetur quam id neque fermentum accumsan. Praesent luctus
-        vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula
-        quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et
-        ultricies bibendum.
-
-        <!-- Question 4 -->
-        What about other Chromium browsers?
-
-        <!-- Answer 4 -->
-        Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi,
-        at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non
-        ut velit.
+        <div for="other-browsers" class="questions__label">
+          <p class="questions__question">
+            What about other Chromium browsers?
+            <i class="questions__arrow fas fa-chevron-down"></i>
+          </p>
+        </div>
+        <p class="questions__answer">
+          Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat
+          mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque
+          non ut velit..
+        </p>
       </div>
 
       <a href="#" class="btn btn--primary">More Info</a>
@@ -246,8 +267,15 @@
         Stay up-to-date with what we’re doing
       </h2>
       <form action="#" class="contact__form">
-        <input type="email" name="email" id="email" />
-        <button type="submit" class="contact__btn"></button>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email address"
+        />
+        <button type="submit" class="nav__link--login contact__btn">
+          Contact Us
+        </button>
       </form>
     </section>
 
@@ -261,16 +289,8 @@
         <a href="#" class="footer__link">Contact</a>
       </div>
       <div class="footer__icons">
-        <img
-          src="./images/icon-facebook.svg"
-          alt="Facebook icon"
-          class="footer__icon"
-        />
-        <img
-          src="./images/icon-twitter.svg"
-          alt="Twitter icon"
-          class="footer__icon"
-        />
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
       </div>
     </footer>
   </body>

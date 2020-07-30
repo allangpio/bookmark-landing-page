@@ -34,7 +34,7 @@ p {
   padding: 0.75rem 2.5rem;
   -webkit-box-shadow: 0 0.5rem 0.5rem rgba(83, 104, 223, 0.26);
           box-shadow: 0 0.5rem 0.5rem rgba(83, 104, 223, 0.26);
-  border-radius: 10px;
+  border-radius: 5px;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -118,6 +118,84 @@ p {
   right: 0;
 }
 
+.questions {
+  margin: 4rem 0 3rem 0;
+  width: 40vw;
+}
+
+.questions__question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 1rem 0rem;
+  color: var(--color-blue-dark);
+}
+
+.questions__question:hover {
+  color: var(--color-primary-red);
+}
+
+.questions__label {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  border-top: 1px solid var(--color-blue-light);
+}
+
+.questions__label:last-of-type {
+  border-bottom: 1px solid var(--color-blue-light);
+}
+
+.questions__arrow {
+  height: 1rem;
+  width: 1rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin-left: 1rem;
+}
+
+.questions__answer {
+  max-width: 350px;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.questions__input {
+  display: none;
+}
+
+.questions__input:checked + .questions__answer {
+  display: block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.questions__input:checked + .questions__label .questions__arrow {
+  background: url("../images/icon-close.svg");
+}
+
+.questions__input:checked + label + div {
+  background: url("../images/icon-close.svg");
+}
+
 .header {
   padding: 2rem 8rem;
   display: -webkit-box;
@@ -154,7 +232,7 @@ p {
   color: #fff;
   background-color: var(--color-primary-red);
   border: 1px solid var(--color-primary-red);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .nav__link--login:hover {
@@ -290,5 +368,127 @@ p {
   margin: 2rem auto;
   position: relative;
   min-height: 60vh;
+}
+
+.faq {
+  margin: 7rem 0 5rem 0;
+  min-height: 80vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.faq h2 {
+  margin-bottom: 1.5rem;
+}
+
+.faq h2,
+.faq > p {
+  max-width: 37.5vw;
+}
+
+.contact {
+  background-color: var(--color-primary-blue);
+  padding: 3rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+  gap: 1rem;
+}
+
+.contact__text {
+  color: white;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.contact h2 {
+  max-width: 30vw;
+  text-align: center;
+  color: white;
+}
+
+.contact input {
+  margin-right: 0.5rem;
+  padding: 0.5rem 2.5rem 0.5rem 0.5rem !important;
+  border: none;
+}
+
+.contact input::-webkit-input-placeholder {
+  text-align: left;
+}
+
+.contact input:-ms-input-placeholder {
+  text-align: left;
+}
+
+.contact input::-ms-input-placeholder {
+  text-align: left;
+}
+
+.contact input::placeholder {
+  text-align: left;
+}
+
+.contact input,
+.contact button {
+  outline: none;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+}
+
+.footer {
+  background-color: var(--color-blue-dark);
+  padding: 0rem 8rem;
+  margin: 0 auto;
+  min-height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__link {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.9rem;
+}
+
+.footer__icons > * {
+  font-size: 1.7rem;
+  color: white;
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+.footer__icons > *:hover {
+  color: var(--color-primary-red);
 }
 /*# sourceMappingURL=style.css.map */
