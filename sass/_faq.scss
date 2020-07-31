@@ -1,6 +1,10 @@
 .questions {
   margin: 4rem 0 3rem 0;
   width: 40vw;
+
+  & p {
+    margin-bottom: 0;
+  }
   &__question {
     display: flex;
     justify-content: space-between;
