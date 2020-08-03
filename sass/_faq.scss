@@ -2,6 +2,7 @@
   margin: 4rem 0 3rem 0;
   width: 40vw;
   min-width: 320px;
+  text-align: left;
 
   & p {
     margin-bottom: 0;
@@ -43,9 +44,9 @@
 
   &__answer {
     max-width: 350px;
-    height: 0;
+    // height: 0;
     overflow: hidden;
-
+    padding-bottom: 1rem;
     transition: all 2s;
   }
 

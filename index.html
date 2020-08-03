@@ -35,7 +35,7 @@
     </header>
 
     <main class="home-hero">
-      <div class="content-wrapper--center">
+      <div class="content-wrapper">
         <h1 class="heading-primary">A Simple Bookmark Manager</h1>
         <p class="sub-heading">
           A clean and simple interface to organize your favourite websites. Open
@@ -74,14 +74,14 @@
         <label for="share" class="features__nav__item">Easy Sharing</label>
       </div>
       <div class="components">
-        <div class="component">
+        <div class="component" id="feature-bookmark">
           <div class="component__image app-preview">
             <img
               src="./images/illustration-features-tab-1.svg"
               alt="Bookmark on desktop device"
             />
           </div>
-          <div class="component__text content-wrapper--center">
+          <div class="content-wrapper">
             <h2 class="heading-secondary">Bookmark in one click</h2>
             <p class="sub-heading">
               Organize your bookmarks however you like. Our simple drag-and-drop
@@ -94,14 +94,14 @@
           </div>
         </div>
 
-        <div class="component nodisplay">
+        <div class="component hidden" id="feature-search">
           <div class="component__image app-preview">
             <img
               src="./images/illustration-features-tab-2.svg"
               alt="Bookmark on desktop device"
             />
           </div>
-          <div class="component__text contet-wrapper">
+          <div class="content-wrapper">
             <h2 class="heading-secondary">Intelligent search</h2>
             <p class="sub-heading">
               Our powerful search feature will help you find saved sites in no
@@ -113,14 +113,14 @@
           </div>
         </div>
 
-        <div class="component nodisplay">
+        <div class="component hidden" id="feature-share">
           <div class="component__image app-preview">
             <img
               src="./images/illustration-features-tab-3.svg"
               alt="Bookmark on desktop device"
             />
           </div>
-          <div class="component__text contet-wrapper">
+          <div class="content-wrapper">
             <h2 class="heading-secondary">Share your bookmarks</h2>
             <p class="sub-heading">
               Easily share your bookmarks and collections with others. Create a
@@ -212,7 +212,7 @@
             <i class="questions__arrow fas fa-chevron-down"></i>
           </p>
         </div>
-        <p class="questions__answer">
+        <p class="questions__answer" hidden>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
           tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis
           quam ornare mattis.
@@ -224,7 +224,7 @@
             <i class="questions__arrow fas fa-chevron-down"></i>
           </p>
         </div>
-        <p class="questions__answer">
+        <p class="questions__answer" hidden>
           Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
           ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
           aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
@@ -238,7 +238,7 @@
             <i class="questions__arrow fas fa-chevron-down"></i>
           </p>
         </div>
-        <p class="questions__answer">
+        <p class="questions__answer" hidden>
           Sed consectetur quam id neque fermentum accumsan. Praesent luctus
           vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula
           quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex
@@ -251,7 +251,7 @@
             <i class="questions__arrow fas fa-chevron-down"></i>
           </p>
         </div>
-        <p class="questions__answer">
+        <p class="questions__answer" hidden>
           Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat
           mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque
           non ut velit..
@@ -293,5 +293,7 @@
         <i class="fab fa-twitter"></i>
       </div>
     </footer>
+
+    <script src="./index.js"></script>
   </body>
 </html>
