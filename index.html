@@ -34,8 +34,30 @@
       </nav>
     </header>
 
+    <div class="hamburguer" hidden>
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+    <div class="mobile-nav" hidden>
+      <div class="logo-container">
+        <img src="./images/logo-bookmark_mobile.svg" alt="Logo Bookmark" />
+      </div>
+      <div class="mobile-nav__links">
+        <a href="#" class="mobile-nav__link">Features</a>
+        <a href="#" class="mobile-nav__link">Pricing</a>
+        <a href="#" class="mobile-nav__link">Contact</a>
+        <a href="#" class="mobile-nav__link mobile-nav__link--outline">Login</a>
+      </div>
+      <div class="mobile-nav__social-links">
+        <i class="fab fa-facebook mobile-nav__social-link"></i>
+        <i class="fab fa-twitter mobile-nav__social-link"></i>
+      </div>
+    </div>
+
     <main class="home-hero">
-      <div class="content-wrapper">
+      <div class="cta-container">
         <h1 class="heading-primary">A Simple Bookmark Manager</h1>
         <p class="sub-heading">
           A clean and simple interface to organize your favourite websites. Open
@@ -46,8 +68,9 @@
           <a href="#" class="btn btn--secondary">Get it on Firefox</a>
         </div>
       </div>
-      <div class="home-hero__image app-preview">
+      <div class="img-container">
         <img
+          class="img"
           src="./images/illustration-hero.svg"
           alt="Bookmark on desktop device"
         />
@@ -266,14 +289,15 @@
       <h2 class="heading-secondary heading-secondary--white">
         Stay up-to-date with what we’re doing
       </h2>
-      <form action="#" class="contact__form">
+      <form class="contact__form">
         <input
           type="email"
           name="email"
           id="email"
           placeholder="Enter your email address"
         />
-        <button type="submit" class="nav__link--login contact__btn">
+
+        <button type="submit" id="submit" class="nav__link--login contact__btn">
           Contact Us
         </button>
       </form>
@@ -281,8 +305,8 @@
 
     <footer class="footer">
       <div class="footer__nav">
-        <div class="logo-container">
-          <img src="./images/logo-bookmark.svg" alt="Logo Bookmark" />
+        <div class="logo-container--footer">
+          <img src="./images/logo-bookmark_white.svg" alt="Logo Bookmark" />
         </div>
         <a href="#" class="footer__link">Features</a>
         <a href="#" class="footer__link">Pricing</a>

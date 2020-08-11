@@ -27,3 +27,23 @@ questions.forEach((question) => {
     question.nextElementSibling.toggleAttribute('hidden');
   });
 });
+
+// Mobile Navigation
+
+const hamburguer = document.querySelector('.hamburguer');
+const hamburguerBars = Array.from(
+  document.querySelectorAll('.hamburguer > div')
+);
+const mobileNav = document.querySelector('.mobile-nav');
+
+function toggleNav() {
+  mobileNav.toggleAttribute('hidden');
+  hamburguer.classList.toggle('change');
+  // hamburguerBars.map((bar) => {
+  //   bar.classList.contains('change')
+  //     ? bar.classList.remove('change')
+  //     : bar.classList.add('change');
+  // });
+}
+
+hamburguer.addEventListener('click', toggleNav);

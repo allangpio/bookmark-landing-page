@@ -17,19 +17,7 @@
 }
 
 html {
-  font-size: clamp(1rem, 3vw, 1.2rem);
-  // font-size: clamp(1rem, 1.2vw, 2rem);
-
-  // font-size: 18px;
-  // @media screen and (max-width: 1150px) {
-  //   font-size: 16px;
-  // }
-  // @media screen and (max-width: 900px) {
-  //   font-size: 14px;
-  // }
-  // @media screen and (max-width: 600px) {
-  //   font-size: 12px;
-  // }
+  font-size: clamp(14px, 2vw, 18px);
 }
 
 body {
@@ -37,13 +25,11 @@ body {
 }
 
 h1 {
-  font-size: clamp(2rem, 4vw, 2.2rem);
-  // font-size: 2.75rem;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: clamp(1.5rem, 3.5vw, 2rem);
-  // font-size: 2rem;
+  font-size: 2rem;
 }
 
 h1,
@@ -54,12 +40,9 @@ h2 {
 p {
   color: var(--color-blue-light);
   line-height: 150%;
-  // margin-bottom: 1.5rem;
-
-  font-size: clamp(14px, 3vw, 18px);
+  font-size: 1rem;
 }
 
 a {
-  font-size: clamp(0.75rem, 2vw, 0.9rem);
-  // font-size: 0.85rem;
+  font-size: 0.85rem;
 }

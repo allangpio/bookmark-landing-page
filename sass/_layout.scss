@@ -7,15 +7,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  z-index: 6;
+  background-color: #fff;
 }
 
 .logo-container {
+  @media screen and (max-width: 1150px) {
+    z-index: 10;
+    position: fixed;
+    top: 15px;
+    left: 2rem;
+  }
+
   & img {
     height: 1.5rem;
   }
 }
 
 .nav {
+  @media screen and (max-width: 1150px) {
+    display: none;
+  }
   &__link {
     text-decoration: none;
     color: var(--color-blue-dark);
@@ -46,34 +63,135 @@
 }
 
 ///////////
+// HAMBURGUER MENU
+///////////
+
+.hamburguer {
+  z-index: 10;
+  position: fixed;
+  top: 10px;
+  right: 2rem;
+
+  @media screen and (max-width: 1150px) {
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  background-color: white;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+  background-color: white;
+}
+
+///////////
+// MOBILE NAV
+///////////
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 7;
+
+  padding: 2rem 2rem;
+
+  background-color: rgba(37, 43, 70, 0.95);
+
+  // display: grid;
+
+  &__links {
+    display: grid;
+    margin-top: 3rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 400;
+
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+    border-bottom: 1px solid rgba(#eee, 0.4);
+
+    &:first-of-type {
+      border-top: 1px solid rgba(#eee, 0.4);
+    }
+
+    &--outline {
+      border-bottom: 0;
+      border: 1px solid #fff;
+      margin-top: 1rem;
+      border-radius: 10px;
+      padding: 1rem;
+    }
+  }
+
+  &__social-links {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translateX(-50%);
+  }
+
+  &__social-link {
+    color: #fff;
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+}
+
+///////////
 // HOME-HERO
 ///////////
 
 .home-hero {
+  margin-top: 100px;
+  min-height: 90vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 400px);
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   place-content: center;
   place-items: center center;
-  gap: 5rem;
+  gap: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
 
-  min-height: 90vh;
-  width: 100%;
-
-  @media screen and (max-width: 819px) {
-    gap: 1rem;
-  }
-
-  &__image {
-    @media screen and (max-width: 819px) {
-      grid-row: 1;
-    }
-    width: 400px;
-    max-width: 80vw;
-    & img {
-      object-fit: contain;
-      height: 100%;
-      width: 100%;
-    }
+  @media screen and (min-width: 1072px) {
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 0;
   }
 
   &__btns {
@@ -87,14 +205,50 @@
   }
 }
 
-.content-wrapper {
+.cta-container {
+  max-width: 500px;
+  width: 70%;
   display: grid;
   grid-template-rows: repeat(3, min-content);
   gap: 1rem;
+  justify-items: center;
+  @media screen and (min-width: 1072px) {
+    justify-items: left;
+  }
+}
 
-  @media screen and (max-width: 819px) {
-    text-align: center;
-    place-items: center;
+.img-container {
+  grid-row: 1;
+  max-width: 80%;
+  @media screen and (min-width: 1072px) {
+    grid-column: 2;
+  }
+
+  &::after {
+    content: '';
+    height: 40%;
+    width: 20rem;
+    background-image: url('./images/bg.svg');
+    background-size: 20rem 20rem;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    right: 0;
+    top: 37%;
+
+    z-index: -1;
+    @media screen and (min-width: 1072px) {
+      top: 45%;
+    }
+  }
+
+  & .img {
+    // max-width: max(500px, calc(100vw - 500px));
+    // width: 80vw;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
   }
 }
 
@@ -168,6 +322,7 @@
     }
   }
 }
+
 .components {
   margin-top: 4rem;
   min-height: 60vh;
@@ -185,8 +340,9 @@
   gap: 5rem;
   place-content: center;
   place-items: center;
+  margin-bottom: 3rem;
 
-  @media screen and (max-width: 795px) {
+  @media screen and (max-width: 974px) {
     text-align: center;
     gap: 2rem;
   }
@@ -200,7 +356,35 @@
       object-fit: contain;
       height: 100%;
       width: 100%;
+      position: relative;
+
+      &::after {
+        content: '';
+        height: 40%;
+        width: 20rem;
+        background-image: url('./images/bg.svg');
+        background-size: 20rem 20rem;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        z-index: -1;
+        @media screen and (min-width: 1072px) {
+          top: 45%;
+        }
+      }
     }
+  }
+}
+
+.content-wrapper {
+  display: grid;
+  gap: 1rem;
+  @media screen and (max-width: 974px) {
+    align-items: center;
+    justify-items: center;
   }
 }
 
@@ -315,6 +499,11 @@
     padding: 0.75rem 2.5rem 0.75rem 0.5rem !important;
     border: transparent;
 
+    &:invalid {
+      border: 1px solidvar(--color-primary-red);
+      position: relative;
+    }
+
     @media screen and (max-width: 800px) {
       margin-right: 0;
     }
@@ -333,6 +522,10 @@
     outline: none;
     border-radius: 5px;
     padding: 0.75rem 2rem;
+  }
+
+  & button {
+    cursor: pointer;
   }
 
   @media screen and (max-width: 800px) {
@@ -408,5 +601,11 @@
     &:hover {
       color: var(--color-primary-red);
     }
+  }
+}
+
+.logo-container--footer {
+  & img {
+    height: 1.5rem;
   }
 }
