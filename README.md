@@ -10,7 +10,7 @@
 
 ## About
 This is a project to acomplish a Fronend Mentor challenge.
-The challenge can be found [here](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158).
+The challenge can be found [here](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158). <br>
 [See live demo](https://allangpio.github.io/bookmark-landing-page/)
 
 <img alt="Bookmark - Desktop" title="Bookmark - Desktop" src="./bookmark.gif" width='400' />
