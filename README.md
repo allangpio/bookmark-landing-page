@@ -1,33 +1,37 @@
-# Frontend Mentor - Bookmark landing page
+<h1 align="center">
+   🔖 Frontend Mentor - Bookmark Landing Page
+</h1>
 
-#### [Live demo](https://allangpio.github.io/bookmark-landing-page/)
+<p align="center">
+ <a href="#about">About</a> • 
+ <a href="#tech-stack">Tech Stack</a> •   
+ <a href="#author">Author</a>
+</p>
 
-## The challenge
+## About
+This is a project to acomplish a Fronend Mentor challenge.
+The challenge can be found [here](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158).
+[See live demo](https://allangpio.github.io/bookmark-landing-page/)
 
-Your challenge is to build out this landing page and get it looking as close to the design as possible.
+<img alt="Bookmark - Desktop" title="Bookmark - Desktop" src="./bookmark.gif" width='400' />
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+## Tech Stack
 
-Your users should be able to:
+- HTML
+- CSS
+- SASS
+- JavaScript
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Receive an error message when the newsletter form is submitted if:
-  - The input field is empty
-  - The email address is not formatted correctly
+## Author
+---
 
-For this challenge you'll need to:
+<img style="border-radius: 100px;" src="https://avatars1.githubusercontent.com/u/63213995?s=460&u=06c696b4fb4c2795ba97e524c580308cb7d591be&v=4" width="100px;" alt="Allan Gaia Pio"/>
 
-- Create the rounded blue background shape with code
-- Change the `fill` and `stroke` color of the SVGs at specific points (the challenge can be completed using the single `logo-bookmark.svg` file provided)
+<sub><b>Allan Gaia Pio</b></sub>
 
 
-## Where to find everything
+Made by Allan Gaia Pio 👋🏽 Get in touch!
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design to work to. 
+[![Linkedin Badge](https://img.shields.io/badge/-Allan-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/allangp/)](https://www.linkedin.com/in/allangp/) 
+[![Gmail Badge](https://img.shields.io/badge/-gpioallan@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:gpioallan@gmail.com)](mailto:gpioallan@gmail.com)
 
-The designs are in JPG static format. This will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. This should help train your eye to perceive differences in spacings and sizes.
-
-You will find all the required assets in the `/images` folder. The assets are already optimized.
-
-There is also a `style-guide.md` file, which contains the information you'll need, such as color palette and fonts.
